@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Text Generator</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="query_box">
+        <h3 class="web_title">Text Generator</h3>
+        <form action="/" method="POST">
+            <label for="Instruction">Instruction:</label>
+            <br>
+            <div class="prompt_inner">
+                <input type="text" name="instruction" id="fill_in" value="{{ instruction }}" required="required">
+            </div>
+            <label for="Input">Input:</label>
+            <br>
+            <div class="prompt_inner">
+                <input type="text" name="prompt_input" id="fill_in" value="{{ prompt_input }}">
+            </div>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+</div>    
+
+{% if response %}
+<div class="response">
+    <p><b>Answer:</b> {{ response }}</p>
+</div>
+{% endif %}
+
+{% endblock %}
