@@ -21,7 +21,7 @@ text_generator = pipeline(
     tokenizer=tokenizer,
     device_map = 'auto',
     pad_token_id = tokenizer.eos_token_id,
-    max_new_tokens = 100,
+    max_new_tokens = 250,
     temperature = 1.0
 )
 
